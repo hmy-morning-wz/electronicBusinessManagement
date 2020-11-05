@@ -1,0 +1,10 @@
+stages:
+  - deploy
+
+# 定义 job
+SIT life_circle deploy:
+  stage: deploy
+  script:
+    - /data/deploy/autocode/management_deploy.sh
+  only:
+    - stable
